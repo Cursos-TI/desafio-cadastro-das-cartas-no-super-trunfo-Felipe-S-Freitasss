@@ -1,16 +1,9 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
-    // Tema 1 - Cadastro das Cartas
     // variáveis: dos tipos(inteiros, pontos flutuantes, char com string)
-    int populacao, turismo;
-    float area, PIB;
+    int turismo;
+    float area, PIB, populacao, dencidade, PIBCapita;
     char estado;
     char codigo[50], cidade[50];
 
@@ -28,7 +21,7 @@ int main() {
     scanf("%s", cidade);
 
     printf("Digite a populacao da cidade: \n");
-    scanf("%d", &populacao);
+    scanf("%f", &populacao);
 
     printf("Digite a area da cidade: \n");
     scanf("%f", &area);
@@ -52,7 +45,7 @@ int main() {
     scanf("%s", cidade);
 
     printf("Digite a populacao da cidade: \n");
-    scanf("%d", &populacao);
+    scanf("%f", &populacao);
 
     printf("Digite a area da cidade: \n");
     scanf("%f", &area);
@@ -63,19 +56,24 @@ int main() {
     printf("Digite o numero de pontos turistico da cidade: \n");
     scanf("%d", &turismo);
     // Fim do cadastro da carta 02
+    dencidade = populacao / area;
+    PIBCapita = PIB / populacao;
 
     // Exibição dos Dados das Cartas: EXP: printei todo o cadastro
     // e em alguns coloquei a menssagem que sera exibida apos o usuario digitar, EXP: (milhões)
 
+    printf("*** Super Trunfo ***\n");
     // inicio da exibição da carta 01
-    printf("carta: 01 \n");
-    printf("estado: %c \n", estado);
-    printf("codigo: %s \n:", codigo);
-    printf("cidade: %s \n", cidade);
-    printf("populacao: %d Milhoes de Habitantes \n", populacao);
-    printf("area: %.2f KM² \n", area);
-    printf("PIB: %.2f milhoes de reais \n", PIB);
-    printf("turismo: %d Pontos Turistico \n", turismo);
+    printf("Carta: 01 \n");
+    printf("Estado: %c \n", estado);
+    printf("Codigo: %s \n:", codigo);
+    printf("Cidade: %s \n", cidade);
+    printf("Populacao: %f Milhoes de Habitantes \n", populacao);
+    printf("Area: %.2f KM² \n", area);
+    printf("PIB: %.2f Milões de Reais \n", PIB);
+    printf("Turismo: %d Pontos Turistico \n", turismo);
+    printf("Dencidade populacional: %.2f Milões de hab/km²\n", dencidade);
+    printf("PIB pér Capita: %2.f Reais\n", PIBCapita);
     // Fim da exibição da carta 01
 
     // inicio da exibição da carta 02
@@ -83,13 +81,16 @@ int main() {
     printf("estado: %c \n", estado);
     printf("codigo: %s \n:", codigo);
     printf("cidade: %s \n", cidade);
-    printf("populacao: %d Milhoes de Habitantes \n", populacao);
+    printf("populacao: %f Milhoes de Habitantes \n", populacao);
     printf("area: %.2f KM² \n", area);
     printf("PIB: %.2f milhoes de reais \n", PIB);
     printf("turismo: %d Pontos Turistico \n", turismo);
+    printf("Dencidade populacional: %.2f Milões de hab/km²\n", dencidade);
+    printf("PIB pér Capita: %2.f Reais\n", PIBCapita);
     // Fim da exibição da carta 02
 
 
 
     return 0;
+
 }
